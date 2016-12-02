@@ -2,6 +2,8 @@ package com.seemoo.pis.fancypsiapp.Collector;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
 import java.text.DateFormat;
@@ -22,7 +24,7 @@ import twitter4j.User;
  * Created by TMZ_LToP on 23.11.2016.
  */
 
-public class TwitterCollector extends AsyncTask<Void,Void,Void>{
+public class TwitterCollector extends AsyncTask<Void,Void,Void> implements Parcelable{
 
 
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
@@ -92,5 +94,30 @@ public class TwitterCollector extends AsyncTask<Void,Void,Void>{
         listeners.add(l);
     }
 
+    public static final Parcelable.Creator<TwitterCollector> CREATOR
+            = new Creator<TwitterCollector>() {
+        @Override
+        public TwitterCollector createFromParcel(Parcel parcel) {
+            return new TwitterCollector(parcel);
+        }
 
+        @Override
+        public TwitterCollector[] newArray(int i) {
+            return new TwitterCollector[0];
+        }
+    };
+
+    private TwitterCollector(Parcel in){
+        listOfFollowees = in.readArrayList(String[].class.getClassLoader());
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeList(listOfFollowees);
+    }
 }

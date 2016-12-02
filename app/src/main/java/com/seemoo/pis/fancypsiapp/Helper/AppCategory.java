@@ -1,8 +1,5 @@
 package com.seemoo.pis.fancypsiapp.Helper;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by TMZ_LToP on 22.11.2016.
  */

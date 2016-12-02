@@ -15,17 +15,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
-import com.google.android.gms.auth.GoogleAuthException;
-import com.google.android.gms.auth.GoogleAuthUtil;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.android.http.AndroidHttp;
-import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
-import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
 
-import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.HttpRequestInitializer;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.JsonFactory;
@@ -39,17 +33,13 @@ import com.google.api.services.gmail.model.Message;
 import com.seemoo.pis.fancypsiapp.Helper.RequestCode;
 import com.seemoo.pis.fancypsiapp.Listener.Listener;
 import com.seemoo.pis.fancypsiapp.Listener.MyPermissionCallback;
-import com.seemoo.pis.fancypsiapp.MainActivity;
-import com.seemoo.pis.fancypsiapp.R;
+import com.seemoo.pis.fancypsiapp.Ui.MainActivity;
 
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -150,7 +140,7 @@ public class GmailCollector {
 
             acquireGooglePlayServices();
             if(isGooglePlayServicesAvailable()){
-                execute();
+                //execute();
             }else{
                 Log.i("GooglePlayService","not avalable");
             }

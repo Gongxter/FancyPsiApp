@@ -10,11 +10,9 @@ import com.seemoo.pis.fancypsiapp.Collector.HWDataCollector;
 import com.seemoo.pis.fancypsiapp.Collector.TwitterCollector;
 import com.seemoo.pis.fancypsiapp.Container.AppStruct;
 import com.seemoo.pis.fancypsiapp.Listener.Listener;
-import com.seemoo.pis.fancypsiapp.MainActivity;
+import com.seemoo.pis.fancypsiapp.Ui.MainActivity;
 
 import java.util.List;
-
-import twitter4j.User;
 
 /**
  * Created by TMZ_LToP on 16.11.2016.
@@ -86,5 +84,5 @@ public class DataController {
     public AppCollector getApps(){
         return apps;
     }
-
+    public TwitterCollector getFollowees(){return twitter;}
 }

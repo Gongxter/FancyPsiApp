@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp;
+package com.seemoo.pis.fancypsiapp.Ui;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 
 import com.seemoo.pis.fancypsiapp.Controller.DataController;
 import com.seemoo.pis.fancypsiapp.Listener.MyPermissionCallback;
+import com.seemoo.pis.fancypsiapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,6 +92,13 @@ public class MainActivity extends AppCompatActivity {
         for (MyPermissionCallback c : callbacks){
             c.permission(requestCode,permissions,grantResults);
         }
+    }
+
+    public void changeToContacts(View view) {
+        Intent intent = new Intent(this,ContactsActivity.class);
+        intent.putExtra("twitter",controller.getFollowees());
+        //intent.putExtra("Apps",controller.getApps());
+        startActivity(intent);
     }
 }
 

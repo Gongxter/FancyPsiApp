@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp;
+package com.seemoo.pis.fancypsiapp.Ui;
 
 
 import android.annotation.TargetApi;
@@ -19,6 +19,8 @@ import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
+
+import com.seemoo.pis.fancypsiapp.R;
 
 import java.util.List;
 

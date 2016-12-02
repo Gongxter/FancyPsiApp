@@ -4,8 +4,6 @@ import android.content.pm.ApplicationInfo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
-
 /**
  * Created by TMZ_LToP on 16.11.2016.
  */

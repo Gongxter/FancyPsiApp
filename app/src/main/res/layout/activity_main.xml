@@ -11,7 +11,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:weightSum="8"
-    tools:context="com.seemoo.pis.fancypsiapp.MainActivity">
+    tools:context="com.seemoo.pis.fancypsiapp.Ui.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,6 +75,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:text="@string/button_contacts_name"
+        android:onClick="changeToContacts"
         android:id="@+id/button_contacts"
         android:enabled="false"
         android:layout_weight="4"/>

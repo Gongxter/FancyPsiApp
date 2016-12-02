@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp;
+package com.seemoo.pis.fancypsiapp.Ui;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

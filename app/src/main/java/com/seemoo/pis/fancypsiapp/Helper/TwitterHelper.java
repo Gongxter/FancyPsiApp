@@ -1,7 +1,5 @@
 package com.seemoo.pis.fancypsiapp.Helper;
 
-import android.os.AsyncTask;
-import android.support.v4.content.res.TypedArrayUtils;
 import android.util.Log;
 
 import java.util.ArrayList;
