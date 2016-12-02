@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Collector;
+package com.seemoo.pis.fancypsiapp.collector;
 
 import android.Manifest;
 import android.accounts.Account;
@@ -30,10 +30,10 @@ import com.google.api.services.gmail.GmailScopes;
 import com.google.api.services.gmail.model.ListLabelsResponse;
 import com.google.api.services.gmail.model.ListMessagesResponse;
 import com.google.api.services.gmail.model.Message;
-import com.seemoo.pis.fancypsiapp.Helper.RequestCode;
-import com.seemoo.pis.fancypsiapp.Listener.Listener;
-import com.seemoo.pis.fancypsiapp.Listener.MyPermissionCallback;
-import com.seemoo.pis.fancypsiapp.Ui.MainActivity;
+import com.seemoo.pis.fancypsiapp.helper.RequestCode;
+import com.seemoo.pis.fancypsiapp.listener.Listener;
+import com.seemoo.pis.fancypsiapp.listener.MyPermissionCallback;
+import com.seemoo.pis.fancypsiapp.ui.MainActivity;
 
 
 import java.io.IOException;

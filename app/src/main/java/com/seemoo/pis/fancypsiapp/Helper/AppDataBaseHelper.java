@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Helper;
+package com.seemoo.pis.fancypsiapp.helper;
 
 import android.content.ContentValues;
 import android.content.Context;

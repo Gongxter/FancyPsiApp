@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Adapter;
+package com.seemoo.pis.fancypsiapp.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

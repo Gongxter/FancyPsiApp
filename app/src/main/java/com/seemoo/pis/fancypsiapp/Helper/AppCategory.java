@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Helper;
+package com.seemoo.pis.fancypsiapp.helper;
 
 /**
  * Created by TMZ_LToP on 22.11.2016.

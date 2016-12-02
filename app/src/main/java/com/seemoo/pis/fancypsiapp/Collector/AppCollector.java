@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Collector;
+package com.seemoo.pis.fancypsiapp.collector;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -8,9 +8,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-import com.seemoo.pis.fancypsiapp.Container.AppStruct;
-import com.seemoo.pis.fancypsiapp.Helper.AppDataBaseHelper;
-import com.seemoo.pis.fancypsiapp.Listener.Listener;
+import com.seemoo.pis.fancypsiapp.container.AppStruct;
+import com.seemoo.pis.fancypsiapp.helper.AppDataBaseHelper;
+import com.seemoo.pis.fancypsiapp.listener.Listener;
 
 import java.io.BufferedReader;
 import java.io.IOException;

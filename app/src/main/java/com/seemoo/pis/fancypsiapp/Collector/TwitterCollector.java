@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Collector;
+package com.seemoo.pis.fancypsiapp.collector;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import com.seemoo.pis.fancypsiapp.Helper.TwitterDataBaseHelper;
-import com.seemoo.pis.fancypsiapp.Helper.TwitterHelper;
-import com.seemoo.pis.fancypsiapp.Listener.Listener;
+import com.seemoo.pis.fancypsiapp.helper.TwitterDataBaseHelper;
+import com.seemoo.pis.fancypsiapp.helper.TwitterHelper;
+import com.seemoo.pis.fancypsiapp.listener.Listener;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterException;

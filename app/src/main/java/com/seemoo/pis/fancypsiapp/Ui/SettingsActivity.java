@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Ui;
+package com.seemoo.pis.fancypsiapp.ui;
 
 
 import android.annotation.TargetApi;

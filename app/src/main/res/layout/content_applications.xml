@@ -12,7 +12,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_applications"
-    tools:context="com.seemoo.pis.fancypsiapp.Ui.Applications">
+    tools:context="com.seemoo.pis.fancypsiapp.ui.Applications">
 
         <ExpandableListView
             android:id="@+id/expander"

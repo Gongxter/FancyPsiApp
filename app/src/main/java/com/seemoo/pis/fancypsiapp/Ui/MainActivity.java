@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Ui;
+package com.seemoo.pis.fancypsiapp.ui;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -10,8 +10,8 @@ import android.widget.CheckBox;
 
 
 
-import com.seemoo.pis.fancypsiapp.Controller.DataController;
-import com.seemoo.pis.fancypsiapp.Listener.MyPermissionCallback;
+import com.seemoo.pis.fancypsiapp.controller.DataController;
+import com.seemoo.pis.fancypsiapp.listener.MyPermissionCallback;
 import com.seemoo.pis.fancypsiapp.R;
 
 import java.util.ArrayList;

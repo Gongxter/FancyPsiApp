@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:label="FancyPsiApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,13 +31,13 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".Ui.SettingsActivity"
+            android:name=".ui.SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity
-            android:name=".Ui.Applications"
+            android:name=".ui.Applications"
             android:label="@string/title_activity_applications"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Ui.ContactsActivity"></activity>
+        <activity android:name=".ui.ContactsActivity"></activity>
     </application>
 
 </manifest>

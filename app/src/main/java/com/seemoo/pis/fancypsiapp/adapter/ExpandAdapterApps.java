@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Adapter;
+package com.seemoo.pis.fancypsiapp.adapter;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.seemoo.pis.fancypsiapp.Container.AppStruct;
-import com.seemoo.pis.fancypsiapp.Helper.AppCategory;
+import com.seemoo.pis.fancypsiapp.container.AppStruct;
+import com.seemoo.pis.fancypsiapp.helper.AppCategory;
 import com.seemoo.pis.fancypsiapp.R;
 
 import java.util.ArrayList;

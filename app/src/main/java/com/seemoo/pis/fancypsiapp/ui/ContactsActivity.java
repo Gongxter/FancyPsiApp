@@ -1,14 +1,13 @@
-package com.seemoo.pis.fancypsiapp.Ui;
+package com.seemoo.pis.fancypsiapp.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
 import com.seemoo.pis.fancypsiapp.R;
-import com.seemoo.pis.fancypsiapp.Adapter.ExpandAdapterContacts;
-import com.seemoo.pis.fancypsiapp.Collector.TwitterCollector;
+import com.seemoo.pis.fancypsiapp.adapter.ExpandAdapterContacts;
+import com.seemoo.pis.fancypsiapp.collector.TwitterCollector;
 
 public class ContactsActivity extends AppCompatActivity {
 

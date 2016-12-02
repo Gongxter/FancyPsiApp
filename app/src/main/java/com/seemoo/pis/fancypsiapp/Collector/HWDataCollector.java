@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Collector;
+package com.seemoo.pis.fancypsiapp.collector;
 
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;

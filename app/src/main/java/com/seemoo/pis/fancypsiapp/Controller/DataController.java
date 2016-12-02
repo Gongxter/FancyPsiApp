@@ -1,16 +1,16 @@
-package com.seemoo.pis.fancypsiapp.Controller;
+package com.seemoo.pis.fancypsiapp.controller;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.wifi.WifiManager;
 
-import com.seemoo.pis.fancypsiapp.Collector.AppCollector;
-import com.seemoo.pis.fancypsiapp.Collector.GmailCollector;
-import com.seemoo.pis.fancypsiapp.Collector.HWDataCollector;
-import com.seemoo.pis.fancypsiapp.Collector.TwitterCollector;
-import com.seemoo.pis.fancypsiapp.Container.AppStruct;
-import com.seemoo.pis.fancypsiapp.Listener.Listener;
-import com.seemoo.pis.fancypsiapp.Ui.MainActivity;
+import com.seemoo.pis.fancypsiapp.collector.AppCollector;
+import com.seemoo.pis.fancypsiapp.collector.GmailCollector;
+import com.seemoo.pis.fancypsiapp.collector.HWDataCollector;
+import com.seemoo.pis.fancypsiapp.collector.TwitterCollector;
+import com.seemoo.pis.fancypsiapp.container.AppStruct;
+import com.seemoo.pis.fancypsiapp.listener.Listener;
+import com.seemoo.pis.fancypsiapp.ui.MainActivity;
 
 import java.util.List;
 

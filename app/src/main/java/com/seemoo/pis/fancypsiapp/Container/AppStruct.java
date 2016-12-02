@@ -1,4 +1,4 @@
-package com.seemoo.pis.fancypsiapp.Container;
+package com.seemoo.pis.fancypsiapp.container;
 
 import android.content.pm.ApplicationInfo;
 import android.os.Parcel;
