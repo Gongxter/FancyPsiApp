@@ -145,7 +145,7 @@ public class GmailCollector {
             HttpTransport transport = AndroidHttp.newCompatibleTransport();
             JsonFactory jsonFactory = JacksonFactory.getDefaultInstance();
 
-            user=username;
+            user=username; // name and id are both the same just the email adress
             mService = new Gmail.Builder(transport,jsonFactory,credential).setApplicationName("FancyPsiApp").build();
 
             acquireGooglePlayServices();
@@ -185,7 +185,7 @@ public class GmailCollector {
             try {
                 ListLabelsResponse listlableResponse =
                 mService.users().labels().list("me").execute();
-                ListMessagesResponse listResponse = mService.users().messages().list("me")
+                ListMessagesResponse listResponse = mService.users().messages().list(user)
                         .setLabelIds(Arrays.asList("SEND"))	// query only outbox messages ("SENT")
                         .setMaxResults((long)100)	// query this number of messages
                         .execute();
