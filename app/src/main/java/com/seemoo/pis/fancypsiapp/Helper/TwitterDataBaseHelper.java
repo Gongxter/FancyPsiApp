@@ -52,8 +52,8 @@ public class TwitterDataBaseHelper extends SQLiteOpenHelper {
         //Date should always only have one value never more when new one is set the old one will ne delted
         for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
             return c.getInt(c.getColumnIndex(DATE));
-
         }
+        db.close();
         //if no date exist for user then return -1
     return -1;
     }
@@ -67,6 +67,7 @@ public class TwitterDataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(TABLE_NAME_F,"",null);
         db.delete(TABLE_NAME_D,"",null);
+        db.close();
     }
     public void setDate(String username){
         SQLiteDatabase db = getWritableDatabase();
@@ -76,6 +77,7 @@ public class TwitterDataBaseHelper extends SQLiteOpenHelper {
         values.put(DATE,date);
         values.put(USERNAME,username);
         db.insert(TABLE_NAME_D,null,values);
+        db.close();
     }
 
     public void insert(String username, String followee, String followeeScreenName){
@@ -97,6 +99,7 @@ public class TwitterDataBaseHelper extends SQLiteOpenHelper {
             s[1]=c.getString(c.getColumnIndex(SCREEN_NAME));
             list.add(s);
         }
+        db.close();
         return list;
     }
 }

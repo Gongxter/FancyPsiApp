@@ -20,10 +20,10 @@ import java.util.List;
 public class ExpandAdapterContacts extends BaseExpandableListAdapter {
 
     List<String[]> twitter;
-    List<?> gmail;
+    List<String> gmail;
     Context context;
 
-    public ExpandAdapterContacts(Context c, List<String[]> twitterList, List<?>gmail){
+    public ExpandAdapterContacts(Context c, List<String[]> twitterList, List<String>gmail){
         context = c;
         this.twitter = twitterList;
         this.gmail = gmail;
@@ -101,7 +101,18 @@ public class ExpandAdapterContacts extends BaseExpandableListAdapter {
         return layout;
     }
     private View makeGmail(int i1, boolean b, View view, ViewGroup viewGroup){
-        return new LinearLayout(context);
+        LayoutInflater fl = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        String mail = gmail.get(i1);
+        LinearLayout layout = (LinearLayout) fl.inflate(R.layout.item_layout,null);
+        TextView name = (TextView) layout.findViewById(R.id.item_name);
+        ImageView icon = (ImageView) layout.findViewById(R.id.item_icon);
+
+        icon.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        name.setText(mail);
+
+        layout.requestLayout();
+
+        return layout;
     }
 
     @Override

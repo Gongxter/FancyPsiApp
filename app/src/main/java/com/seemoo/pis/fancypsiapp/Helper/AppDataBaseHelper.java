@@ -59,5 +59,6 @@ public class AppDataBaseHelper extends SQLiteOpenHelper {
         values.put(PACKNAME,packname);
         values.put(CATEGORY,category);
         i = db.insert(TABLE_NAME,null,values);
+        db.close();
     }
 }

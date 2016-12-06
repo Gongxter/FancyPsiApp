@@ -3,6 +3,7 @@ package com.seemoo.pis.fancypsiapp.controller;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.wifi.WifiManager;
+import android.os.AsyncTask;
 
 import com.seemoo.pis.fancypsiapp.collector.AppCollector;
 import com.seemoo.pis.fancypsiapp.collector.GmailCollector;
@@ -18,50 +19,43 @@ import java.util.List;
  * Created by TMZ_LToP on 16.11.2016.
  */
 
-public class DataController {
+public class DataController extends AsyncTask<Void,Void,Void> {
     //TODO: set up all the data read existing data and only get everything according to the Settings
-
-        AppCollector apps;
-        HWDataCollector local;
-        Context context;
-        TwitterCollector twitter;
-        SQLiteDatabase db;
-        List<String[]> followees;
-        boolean isTwitterReady = false;
-        GmailCollector gmailCollector;
+    int contactCount = 0;
+    AppCollector apps;
+    HWDataCollector local;
+    Context context;
+    TwitterCollector twitter;
+    SQLiteDatabase db;
+    List<String[]> followees;
+    boolean isTwitterReady = false;
+    GmailCollector gmailCollector;
+    Listener contactCallback = new Listener() {
+        @Override
+        public void onReady() {
+                  contactCount++;
+            if (contactCount == 1){
+                ((MainActivity)context).setContactsActive();
+            }
+        }
+    };
 
 
     public DataController(final Context context){
         this.context= context;
-        apps = new AppCollector(context);
-        twitter = new TwitterCollector(context);
-        gmailCollector = new GmailCollector(context);
-
-
-        initApps();
-        initTwitter();
-        initGmail();
 
         local = new HWDataCollector((WifiManager) context.getSystemService(Context.WIFI_SERVICE));
 
-
+        execute();
     }
+
 
     private void initGmail() {
 
     }
 
     private void initTwitter() {
-        twitter.addListener(new Listener() {
-            @Override
-            public void onReady() {
-                followees = twitter.getFollowees();
-                if (followees != null ){
-                    isTwitterReady = true;
-                    ((MainActivity)context).setContactsActive();
-                }
-            }
-        });
+        twitter.addListener(contactCallback);
         twitter.execute();
     }
 
@@ -85,4 +79,19 @@ public class DataController {
         return apps;
     }
     public TwitterCollector getFollowees(){return twitter;}
+    public List<String> getMails(){return gmailCollector.getMailList();}
+
+    @Override
+    protected Void doInBackground(Void... voids) {
+        apps = new AppCollector(context);
+        twitter = new TwitterCollector(context);
+        gmailCollector = new GmailCollector(context, contactCallback);
+
+
+        initApps();
+        initTwitter();
+        initGmail();
+
+        return null;
+    }
 }

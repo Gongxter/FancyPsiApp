@@ -28,14 +28,27 @@
         android:onClick="changeToApps"
         android:enabled="false"
         android:layout_weight="4"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+
+            >
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:id="@+id/check_apps"
-        android:checked="false"
+        android:gravity="center"
+        android:layout_gravity="center"
         android:clickable="false"
+        android:id="@+id/check_apps"
         />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/progress_apps"/>
+        </FrameLayout>
     </LinearLayout>
 
 
@@ -60,6 +73,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:checked="false"
         android:clickable="false"/>
     </LinearLayout>
@@ -79,12 +94,25 @@
         android:id="@+id/button_contacts"
         android:enabled="false"
         android:layout_weight="4"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp">
     <CheckBox
         android:id="@+id/check_contacts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:clickable="false"/>
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:clickable="false">
+        </CheckBox>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/progress_contacts"/>
+        </FrameLayout>
     </LinearLayout>
 
 

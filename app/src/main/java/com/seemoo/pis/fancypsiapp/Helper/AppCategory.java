@@ -25,12 +25,12 @@ public enum AppCategory {
     public static AppCategory getCategory(String s){
         if(s.contains("GAME_")){return GAMES;}
         if(s.contains("COMMUNICATION")){return COMMUNICATION;}
-        if(s.contains("TOOLS")||s.contains("PHOTOGRAPHY")||s.contains("NAVIGATION")||s.contains("PRODUCTIVITY")||s.contains("WEATHER")||s.contains("VIDEO")||s.contains("MUSIC")){return TOOLS;}
-        if(s.contains("NEWS_")||s.contains("EDUCATION")){return NEWSEDUCATION;}
+        if(s.contains("TOOLS")||s.contains("PERSONALIZATION")||s.contains("PHOTOGRAPHY")||s.contains("NAVIGATION")||s.contains("PRODUCTIVITY")||s.contains("WEATHER")||s.contains("PERSONALIZATION")){return TOOLS;}
+        if(s.contains("NEWS_")||s.contains("EDUCATION")||s.contains("BOOKS")){return NEWSEDUCATION;}
         if(s.contains("SHOPPING")){return SHOPPING;}
-        if(s.contains("SOCIAL")||s.contains("FOOD_")|| s.contains("LIFE")||s.contains("SPORTS")||s.contains("TRAVEL")){return SOCIAL;}
+        if(s.contains("SOCIAL")||s.contains("FOOD_")|| s.contains("LIFE")||s.contains("SPORTS")||s.contains("TRAVEL")||s.contains("FITNESS")){return SOCIAL;}
         if(s.contains("BUSINESS")||s.contains("FINANCE")){return FINANCE;}
-        if(s.contains("ENTERTAINMENT")){return ENTERTAINMENT;}
+        if(s.contains("ENTERTAINMENT")||s.contains("VIDEO")||s.contains("MUSIC")){return ENTERTAINMENT;}
         return UNDEFINED;
     }
 

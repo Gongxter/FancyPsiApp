@@ -67,8 +67,6 @@ public class TwitterHelper {
 
         List<Long> idsList = new ArrayList<Long>(Arrays.asList(ArrayUtils.toObject(ids)));
 
-        Log.i("TwitterHelper",("size of idsList: " + idsList.size()));
-
         int listBound = 0;
         List<User> followeesList = null;
 
